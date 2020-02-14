@@ -1,3 +1,10 @@
 $(document).ready(function(){
-    // alert(1);
+    $('.burger').click(function(){
+        $(this).toggleClass('active');
+        $('.mobile-menu').fadeToggle();
+    });
+    $('.bars').click(function(){
+        $(this).toggleClass('active');
+        $('.list-dropdown').fadeToggle();
+    });
 });

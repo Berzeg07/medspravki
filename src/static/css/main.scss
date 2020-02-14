@@ -17,14 +17,17 @@
 }
 
 .header__left {
+    display: flex;
+    align-items: center;
+    @media(min-width: 992px) and (max-width: 1279px) {
+        width: 100%;
+    }
     @media(min-width: 1280px) {
         max-width: 1344px;
         width: 100%;
         background: #1F48AE;
         padding: 18px 24px 24px;
-        display: flex;
         justify-content: space-between;
-        align-items: center;
         position: relative;
     }
     @media(min-width: 1600px) {
@@ -95,6 +98,12 @@
 .header__search {
     max-width: 792px;
     width: 100%;
+    @media(max-width: 991px) {
+        display: none;
+    }
+    @media(max-width: 1279px) {
+        padding-left: 50px;
+    }
     @media(min-width: 1280px) and (max-width: 1365px) {
         max-width: 530px;
     }
@@ -203,17 +212,34 @@
     font-family: "TTNorms-Bold";
     font-size: 28px;
     color: white;
+    @media(max-width: 1279px) {
+        font-size: 16px;
+    }
     @media(min-width: 1280px) and (max-width: 1599px) {
         font-size: 20px;
     }
 }
 
 .header__logo {
-    width: 145px;
+    width: 80px;
+
+    img {
+        display: block;
+    }
+    @media(min-width: 375px) {
+        width: 126px;
+    }
+    @media(min-width: 1280px) {
+        width: 145px;
+    }
 }
 
 .header__info {
     font-family: "TTNorms-Medium";
+    @media(max-width: 1279px) {
+        text-align: right;
+        line-height: 18px;
+    }
     @media(min-width: 1600px) {
         padding-top: 6px;
     }
@@ -232,7 +258,7 @@
                 font-family: "TTNorms-Bold";
                 font-size: 15px;
                 text-transform: uppercase;
-                @media(min-width: 1280px) and (max-width: 1599px) {
+                @media(max-width: 1599px) {
                     font-size: 12px;
                 }
             }
@@ -307,11 +333,248 @@
     background-size: contain;
     margin-right: 38px;
 }
+
+.bars.active {
+    background: url("../img/close-red.png") no-repeat center;
+}
 @media(max-width: 1279px) {
     .header__bottom,
     .header__info li:last-child,
-    .header__search,
     .license {
         display: none;
     }
+}
+
+.burger {
+    border-radius: 4px;
+    border: 2px solid rgba(179, 204, 248, 0.4);
+    width: 45px;
+    height: 41px;
+    background: url("../img/burger.png") no-repeat center;
+    margin-right: 15px;
+    @media(min-width: 1280px) {
+        display: none;
+    }
+}
+
+.burger.active {
+    background: url("../img/close.png") no-repeat center;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 115px;
+    z-index: 10;
+    max-width: 700px;
+    width: 100%;
+    background: #4073CE;
+    padding: 12px 17px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    @media(max-width: 991px) {
+        top: 82px;
+    }
+}
+
+.mobile-menu__title {
+    font-family: "TTNorms-Bold";
+    color: white;
+    margin-bottom: 18px;
+}
+
+.mobile-menu__list {
+    li {
+        margin-bottom: 30px;
+    }
+
+    a {
+        font-family: "TTNorms-Bold";
+        padding-bottom: 1px;
+        font-size: 16px;
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px solid #AECBFA;
+        color: #AECBFA;
+        margin-left: 46px;
+        @media(max-width: 374px) {
+            font-size: 14px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            background-size: contain;
+        }
+    }
+
+    .drive-ref:after {
+        background: url("../img/car-m.png") no-repeat center;
+    }
+
+    .gun-ref:after {
+        background: url("../img/gun-m.png") no-repeat center;
+    }
+
+    .work-ref:after {
+        background: url("../img/case-m.png") no-repeat center;
+    }
+}
+
+.mobile-menu__info {
+    li {
+        margin-bottom: 10px;
+    }
+
+    a {
+        font-family: "TTNorms-Medium";
+        color: #AECBFA;
+        font-size: 16px;
+    }
+}
+
+.btn {
+    font-family: "TTNorms-Medium";
+    font-size: 22px;
+    background: #FB0066;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+.mobile-menu__btn-block {
+    text-align: center;
+}
+
+.mobile-menu__btn {
+    width: 343px;
+    height: 79px;
+    @media(max-width: 374px) {
+        width: 300px;
+    }
+}
+
+.mobile-menu__inner {
+    @media(min-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.search-mobile {
+    padding: 7px 15px;
+    background: #122C91;
+    @media(min-width: 992px) {
+        display: none;
+    }
+}
+
+.lisence-mobile {
+    background: #3E72CF;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: center;
+    @media(min-width: 375px) {
+        padding: 5px 23px;
+    }
+    @media(min-width: 1280px) {
+        display: none;
+    }
+}
+
+.lisence-mobile__inner {
+    @media(min-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.lisence-mobile__top {
+    display: flex;
+    align-items: center;
+    @media(min-width: 768px) {
+        width: 50%;
+    }
+
+    span {
+        font-family: "TTNorms-Medium";
+        color: #AECBFA;
+        font-size: 12px;
+    }
+}
+
+.lisence-mobile__img {
+    width: 30px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.lisence-mobile__list {
+    font-family: "TTNorms-Medium";
+    font-size: 14px;
+    color: #FFFFFF;
+    list-style-type: disc;
+    column-count: 2;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 14px;
+}
+
+.list-dropdown {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: rgba(42, 111, 219, 0.9);
+    padding: 22px 40px 30px;
+    z-index: 10;
+    display: none;
+    @media(min-width: 1600px) {
+        padding: 22px 100px 50px;
+    }
+}
+
+.list-dropdown__title {
+    font-family: "TTNorms-Bold";
+    font-size: 28px;
+    color: white;
+    margin-bottom: 22px;
+}
+
+.list-dropdown__el {
+    margin-bottom: 33px;
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 33px;
+        }
+    }
+
+    a {
+        font-family: "TTNorms-Bold";
+        font-size: 18px;
+        color: #AECBFA;
+        display: inline-block;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #AECBFA;
+        @media(max-width: 1599px) {
+            font-size: 16px;
+        }
+
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+
+.list-dropdown__inner {
+    display: flex;
+    justify-content: space-between;
 }

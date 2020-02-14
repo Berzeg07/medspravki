@@ -1,6 +1,7 @@
 header.header
     .header__top
         .header__left
+            button.burger(type="button")
             .logo.header__logo
                 img(src="img/logo.png" width="145" height="81" alt="Медсправки")
             .license
@@ -23,7 +24,7 @@ header.header
                             a(href="#") Контакты
                 .search-block
                     input(type="text" placeholder="Поиск").search                                           
-                    
+
         .header__right
             ul.adress-list
                 li м. Таганская
@@ -37,6 +38,51 @@ header.header
                     span Ежедневно без выходных
                 li
                     span Пн-Пт: с 9:00 до 21:00 <br>Сб-Вс: с 10:00 до 20:00
+    .search-mobile
+        input(type="text" placeholder="Найти").search
+    .lisence-mobile
+        .lisence-mobile__inner
+            .lisence-mobile__top
+                .lisence-mobile__img
+                    img(src="img/orel.png" alt="Медсправки")
+                span Лицензия № Л0-77-О1-ОО7951 департамента здравоохранения города Москвы
+            ul.lisence-mobile__list
+                li м. Таганская
+                li м. Авиамоторная
+                li м. Ленинский пр-т
+                li м. Братиславская
+
+
+    .mobile-menu
+        .mobile-menu__inner
+            .mobile-menu__item
+                .mobile-menu__title Медсправки
+                ul.mobile-menu__list
+                    li
+                        a(href="#").drive-ref Медсправка водительская 003-В/у
+                    li
+                        a(href="#").gun-ref Медсправка на оружие 002-О/у
+                    li
+                        a(href="#").work-ref Справка на работу 086/у
+                    li
+                        a(href="#").work-ref Справка на госслужбу 001 гс/у
+            .mobile-menu__item
+                .mobile-menu__title Информация
+                ul.mobile-menu__info
+                    li
+                        a(href="#") О компании
+                    li
+                        a(href="#") Лицензии
+                    li
+                        a(href="#") Наши услуги
+                    li
+                        a(href="#") Прайс-лист
+                    li
+                        a(href="#") Контакты
+        .mobile-menu__btn-block
+            button(type="button").btn.mobile-menu__btn Записаться на прием        
+
+
     .header__bottom
         button.bars(type="button")
         ul.services-list
@@ -47,5 +93,60 @@ header.header
             li
                 a(href="#").work-ref Справка на работу 086/у
             li
-                a(href="#").work-ref Справка на госслужбу 001 гс/у           
-    
+                a(href="#").work-ref Справка на госслужбу 001 гс/у
+
+    .list-dropdown
+        .list-dropdown__title Медсправки
+        .list-dropdown__inner         
+            ul.list-dropdown__el
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+            ul.list-dropdown__el
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+            ul.list-dropdown__el
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+            ul.list-dropdown__el
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у
+                li
+                    a(href="#") Медсправка водительская 003-В/у        
