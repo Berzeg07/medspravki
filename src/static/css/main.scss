@@ -831,3 +831,213 @@
         align-items: flex-start;
     }
 }
+
+.banner-main {
+    padding: 27px 16px;
+    @media(min-width: 1279px) {
+        padding: 27px 40px;
+        background: url("../img/top-bg.jpg") no-repeat center;
+        background-size: cover;
+    }
+    @media(min-width: 1600px) {
+        padding: 27px 182px;
+    }
+}
+
+.banner-main__title {
+    font-family: "TTNorms-Bold";
+    font-size: 58px;
+    color: #3E72CF;
+    line-height: 60px;
+    margin-bottom: 16px;
+
+    span {
+        color: #E33269;
+    }
+
+    i {
+        font-style: normal;
+        font-size: 51px;
+    }
+    @media(max-width: 374px) {
+        font-size: 22px;
+        line-height: 24px;
+        text-align: center;
+
+        i {
+            font-size: 18px;
+        }
+    }
+    @media(min-width: 375px) and (max-width: 1279px) {
+        line-height: 26px;
+        font-size: 26px;
+        text-align: center;
+
+        i {
+            font-size: 20px;
+        }
+    }
+}
+
+.banner-main__list {
+    font-family: "TTNorms-Light";
+    color: #2A6FDB;
+    font-size: 32px;
+    margin-bottom: 25px;
+    @media(max-width: 1279px) {
+        display: none;
+    }
+
+    a {
+        font-family: "TTNorms-Bold";
+        color: inherit;
+        border-bottom: 1px solid #2A6FDB;
+        display: inline-block;
+        margin-right: 12px;
+    }
+}
+
+.recept-form {
+    max-width: 498px;
+    width: 100%;
+    @media(max-width: 1279px) {
+        margin: 0 auto;
+    }
+}
+
+.recept-form__title {
+    font-family: "TTNorms-Bold";
+    font-size: 32px;
+    color: #FB0066;
+    text-align: center;
+    margin-bottom: 20px;
+    @media(max-width: 1279px) {
+        font-size: 22px;
+    }
+}
+
+.custom-select {
+    height: 67px;
+    text-align: left;
+    margin-bottom: 30px;
+    @media(max-width: 1279px) {
+        height: 52px;
+        margin-bottom: 14px;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+
+    .select2-selection--single {
+        font-family: "TTNorms-Regular";
+        font-size: 20px;
+        height: 67px;
+        border-radius: 5px;
+        background: #DDE9FB url("../img/split-icon.png") no-repeat center left 28px;
+        border: 2px solid rgba(179, 204, 248, 0.6);
+        @media(max-width: 1279px) {
+            font-size: 14px;
+            height: 52px;
+            background: white;
+        }
+    }
+
+    .select2-dropdown {
+        border: none;
+    }
+
+    .select2-selection__arrow {
+        background: url("../img/expand.png") no-repeat center;
+
+        b {
+            display: none;
+        }
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 21px;
+        right: 27px;
+        @media(max-width: 1279px) {
+            top: 14px;
+            right: 8px;
+        }
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        padding-left: 75px;
+        line-height: 60px;
+        @media(max-width: 1279px) {
+            line-height: 47px;
+            padding-left: 21px;
+        }
+    }
+}
+
+.select2-dropdown {
+    border: 1px solid #C4D8F9;
+}
+
+.select2-results__option {
+    padding-left: 21px;
+}
+
+.select2-search {
+    display: none;
+}
+
+.form-inp {
+    width: 100%;
+    height: 67px;
+    border-radius: 5px;
+    border: 2px solid rgba(179, 204, 248, 0.6);
+    margin-bottom: 30px;
+    color: #75768C;
+    font-size: 20px;
+    padding-left: 75px;
+    @media(max-width: 1279px) {
+        font-size: 14px;
+        height: 52px;
+        padding-left: 56px;
+        margin-bottom: 14px;
+    }
+}
+
+.form-inp_name {
+    background: #DDE9FB url("../img/man-icon.png") no-repeat center left 28px;
+    @media(max-width: 1279px) {
+        background: white url("../img/man-icon.png") no-repeat center left 16px;
+    }
+}
+
+.form-inp_phone {
+    background: #DDE9FB url("../img/call-icon.png") no-repeat center left 28px;
+    @media(max-width: 1279px) {
+        background: white url("../img/call-icon.png") no-repeat center left 16px;
+    }
+}
+
+.recept-form__btn {
+    margin-bottom: 22px;
+}
+
+.recept-form__btn .btn {
+    width: 100%;
+    height: 79px;
+}
+
+.privacy {
+    font-family: "TTNorms-Medium";
+    color: #7884B9;
+    @media(max-width: 1279px){
+        font-size: 14px;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    span {
+        border-bottom: 1px solid #7884B9;
+    }
+}

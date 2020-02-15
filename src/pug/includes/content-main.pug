@@ -1,1 +1,41 @@
-p Контент
+main
+    .banner-main
+        .banner-main__item
+            .banner-main__title 
+                |Любая справка 
+                span за 30 минут <br>
+                i быстро, официально, недорого
+        
+            ul.banner-main__list
+                li 
+                    |-
+                    a(href='#') Справка в ГИБДД, 
+                    a(href="#") справка на оружие, 
+                    a(href="#") на работу, 
+                    a(href="#") учебу
+                li    
+                    |-
+                    a(href='#') Водительская медкомиссия, 
+                    a(href="#") профосмотры, 
+                    a(href="#") медкнижки
+            
+            form.recept-form(action="#")
+                .recept-form__title Онлайн запись комиссию
+                .custom-select
+                    select
+                        option Медсправка водительская 003-В/у
+                        option Тест 1
+                        option Тест 2
+                        option Тест 3
+                input(type="text" placeholder="Ваше имя").form-inp.form-inp_name
+                input(type="text" placeholder="Номер телефона").form-inp.form-inp_phone
+                .recept-form__btn
+                    button.btn(type="submit") Записаться на прием
+                .privacy
+                    a(href="#") Нажимая на кнопку «Записаться на прием», вы принимаете условия 
+                    span передачи 
+                    |и 
+                    span обработки информации           
+                            
+                        
+                
