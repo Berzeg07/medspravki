@@ -1550,3 +1550,139 @@
         margin-left: 70px;
     }
 }
+
+.price-table {
+    width: 100%;
+    margin-bottom: 30px;
+    @media(min-width: 1280px) {
+        margin-bottom: 75px;
+    }
+
+    thead {
+        font-family: "TTNorms-Medium";
+        background: #3E72CF;
+        font-size: 16px;
+        color: white;
+        height: 44px;
+
+        tr {
+            td {
+                &:first-child {
+                    padding-left: 68px;
+                    @media(max-width: 991px){
+                        padding-left: 15px;
+                    }
+                }
+
+                &:not(:first-child) {
+                    text-align: center;
+                }
+
+                &:last-child {
+                    width: 270px;
+                }
+
+                &:not(:first-child) {
+                    @media(max-width: 991px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .thead-mob {
+        @media(min-width: 992px) {
+            display: none;
+        }
+    }
+
+    .thead-desc {
+        @media(max-width: 991px) {
+            display: none;
+        }
+    }
+
+    tbody {
+        tr {
+            &:hover {
+                td {
+                    &:first-child,
+                    &:last-child {
+                        position: relative;
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            height: 100%;
+                            width: 4px;
+                            background: #FFDD2D;
+                            top: 0;
+                        }
+                    }
+
+                    &:first-child:after {
+                        left: 0;
+                    }
+
+                    &:last-child:after {
+                        right: 0;
+                    }
+
+                    .cont-btn {
+                        visibility: visible;
+                    }
+                    color: #FF6633;
+
+                    a {
+                        color: inherit;
+                        border-bottom: 1px solid #FF6633;
+                    }
+                }
+            }
+
+            td {
+                font-family: "TTNorms-Medium";
+                color: #6D7286;
+
+                &:first-child {
+                    padding-left: 68px;
+                    @media(max-width: 991px){
+                        padding-left: 15px;
+                    }
+                }
+
+                &:not(:first-child) {
+                    text-align: center;
+                }
+
+                &:nth-child(3),
+                &:nth-child(4) {
+                    @media(max-width: 991px) {
+                        display: none;
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    font-size: 18px;
+                    padding-bottom: 1px;
+                    border-bottom: 1px solid #6D7286;
+                    @media(max-width: 767px){
+                        font-size: 12px;
+                        margin: 5px 0px;
+                    }
+
+                    &:hover {
+                        border-bottom: 1px solid transparent;
+                    }
+                }
+
+                .cont-btn {
+                    visibility: hidden;
+                    font-family: "TTNorms-Regular";
+                }
+            }
+        }
+    }
+}
