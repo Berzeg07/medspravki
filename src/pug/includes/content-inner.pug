@@ -1,23 +1,12 @@
 main
-    .banner-main
+    .banner-main.banner-main__inner
         .banner-main__item
-            .banner-main__title 
-                |Любая справка 
-                span за 30 минут <br>
-                i быстро, официально, недорого
-        
-            ul.banner-main__list
-                li 
-                    |-
-                    a(href='#') Справка в ГИБДД, 
-                    a(href="#") справка на оружие, 
-                    a(href="#") на работу, 
-                    a(href="#") учебу
-                li    
-                    |-
-                    a(href='#') Водительская медкомиссия, 
-                    a(href="#") профосмотры, 
-                    a(href="#") медкнижки
+            .breadcrumbs
+                a(href="#") Главная
+                a(href="#") Медсправки
+                span Медсправка водительская
+                
+            .banner-main__title Медсправка водительская 003-В/у<br> быстро, официально, недорого
             
             form.recept-form(action="#")
                 .recept-form__title Онлайн запись комиссию
@@ -43,100 +32,59 @@ main
                 p Наша клиника осуществляет оформление медицинских справок в Москве для ГИБДД, на приобретения оружия, на пропуск к плаванию в бассейне, о профпригодности и др. Медосмотр для получения необходимой медицинской справки 2019 года проводится в удобное для клиента время. Современная клиника, оснащенная новейшим оборудованием, позволяет провести любые медицинские исследования и анализы в оперативном порядке.
                 p С нами работают высококвалифицированные врачи и специалисты, которые проведут медицинский осмотр максимально оперативно и недорого.
             
-            .slider-wrap
-                .ref-slider.swiper-container
-                    .swiper-wrapper
-                        .swiper-slide
-                            .ref-slider__item
-                                .ref-slider__img
-                                    img(src="img/sl-1.jpg" alt="Медсправка водительская 003-В/у" width="370" height="244")
-                                    .time-block
-                                        .time-block__item от
-                                        .time-block__item 30
-                                        .time-block__item мин
-                                .ref-slider__link
-                                    a(href="#") Медсправка водительская 003-В/у
-                                .ref-slider__title Специалисты водительской комиссии:
-                                ul.ref-slider__list
-                                    li – врач-терапевт или врач общей практики
-                                    li – врач-офтальмологом (окулист)
-                                    li – врач-психиатр
-                                    li – врач-нарколог
-                                .ref-slider__bottom
-                                    .ref-slider__price 
-                                        |2500 
-                                        span руб.
-                                    .ref-slider__btn
-                                        button(type="button").cont-btn Оформить справку        
-                        .swiper-slide
-                            .ref-slider__item
-                                .ref-slider__img
-                                    img(src="img/sl-2.jpg" alt="Медсправка водительская 003-В/у" width="370" height="244")
-                                    .time-block
-                                        .time-block__item от
-                                        .time-block__item 30
-                                        .time-block__item мин
-                                .ref-slider__link
-                                    a(href="#") Медсправка водительская 003-В/у
-                                .ref-slider__title Специалисты водительской комиссии:
-                                ul.ref-slider__list
-                                    li – врач-терапевт или врач общей практики
-                                    li – врач-офтальмологом (окулист)
-                                    li – врач-психиатр
-                                    li – врач-нарколог
-                                .ref-slider__bottom
-                                    .ref-slider__price 
-                                        |2500 
-                                        span руб.
-                                    .ref-slider__btn
-                                        button(type="button").cont-btn Оформить справку  
-                        .swiper-slide
-                            .ref-slider__item
-                                .ref-slider__img
-                                    img(src="img/sl-3.jpg" alt="Медсправка водительская 003-В/у" width="370" height="244")
-                                    .time-block
-                                        .time-block__item от
-                                        .time-block__item 30
-                                        .time-block__item мин
-                                .ref-slider__link
-                                    a(href="#") Медсправка водительская 003-В/у
-                                .ref-slider__title Специалисты водительской комиссии:
-                                ul.ref-slider__list
-                                    li – врач-терапевт или врач общей практики
-                                    li – врач-офтальмологом (окулист)
-                                    li – врач-психиатр
-                                    li – врач-нарколог
-                                .ref-slider__bottom
-                                    .ref-slider__price 
-                                        |2500 
-                                        span руб.
-                                    .ref-slider__btn
-                                        button(type="button").cont-btn Оформить справку  
-                        .swiper-slide
-                            .ref-slider__item
-                                .ref-slider__img
-                                    img(src="img/sl-4.jpg" alt="Медсправка водительская 003-В/у" width="370" height="244")
-                                    .time-block
-                                        .time-block__item от
-                                        .time-block__item 30
-                                        .time-block__item мин
-                                .ref-slider__link
-                                    a(href="#") Медсправка водительская 003-В/у
-                                .ref-slider__title Специалисты водительской комиссии:
-                                ul.ref-slider__list
-                                    li – врач-терапевт или врач общей практики
-                                    li – врач-офтальмологом (окулист)
-                                    li – врач-психиатр
-                                    li – врач-нарколог
-                                .ref-slider__bottom
-                                    .ref-slider__price 
-                                        |2500 
-                                        span руб.
-                                    .ref-slider__btn
-                                        button(type="button").cont-btn Оформить справку
-                    .swiper-pagination  
-                .swiper-button-next.ref-next
-                .swiper-button-prev.ref-prev                        
+        .price-block
+            h2.main-title Стоимость медсправок
+            
+            .tab-block
+                table.price-table(cellspacing="0")                        
+                    thead.thead-mob
+                        tr
+                            td(colspan="4") Наименование медсправки
+                            td Цена
+                            td Время медкомиссии
+                            td
+                    thead.thead-desc
+                        tr
+                            td Наименование медсправки
+                            td Цена
+                            td Время медкомиссии
+                            td            
+                    tbody
+                        tr
+                            td
+                                a(href="#") Медсправка водительская 003-В/у
+                            td 2100 &#8381; 
+                            td от 30 мин
+                            td 
+                                button(type="button").cont-btn Оформить справку
+                        tr        
+                            td
+                                a(href="#") Медсправка на оружие 002-О/у
+                            td 2100 &#8381; 
+                            td от 30 мин
+                            td 
+                                button(type="button").cont-btn Оформить справку
+                        tr        
+                            td
+                                a(href="#") Справка на работу 086/у
+                            td 2100 &#8381; 
+                            td от 30 мин
+                            td 
+                                button(type="button").cont-btn Оформить справку
+                        tr        
+                            td 
+                                a(href="#") Справка на госслужбу 001 гс/у
+                            td 2100 &#8381; 
+                            td от 30 мин
+                            td 
+                                button(type="button").cont-btn Оформить справку
+                        tr        
+                            td
+                                a(href="#") Медсправка водительская 003-В/у 
+                            td 2100 &#8381; 
+                            td от 30 мин
+                            td 
+                                button(type="button").cont-btn Оформить справку                   
         
     .rent
         .rent__item
@@ -185,147 +133,94 @@ main
                         a(href="tel:78005114026").rent-stage__phone 8 (800) 511 40 26
                         .rent-stage__worktime Звоните ежедневно 24/7
     
-    .container
-        .price-block
-            h2.main-title Стоимость медсправок
-            
-            
-            .tabs
-                a(href="#tab1") Медицинские справки
-                a(href="#tab2") Медицинские книжки
-            
-            .tab-block#tab1
-                table.price-table(cellspacing="0")                        
-                    thead.thead-mob
-                        tr
-                            td(colspan="4") Наименование медсправки
-                            td Цена
-                            td Время медкомиссии
-                            td
-                    thead.thead-desc
-                        tr
-                            td Наименование медсправки
-                            td Цена
-                            td Время медкомиссии
-                            td            
-                    tbody
-                        tr
-                            td
-                                a(href="#") Медсправка водительская 003-В/у
-                            td 2100 &#8381; 
-                            td от 30 мин
-                            td 
-                                button(type="button").cont-btn Оформить справку
-                        tr        
-                            td
-                                a(href="#") Медсправка на оружие 002-О/у
-                            td 2100 &#8381; 
-                            td от 30 мин
-                            td 
-                                button(type="button").cont-btn Оформить справку
-                        tr        
-                            td
-                                a(href="#") Справка на работу 086/у
-                            td 2100 &#8381; 
-                            td от 30 мин
-                            td 
-                                button(type="button").cont-btn Оформить справку
-                        tr        
-                            td 
-                                a(href="#") Справка на госслужбу 001 гс/у
-                            td 2100 &#8381; 
-                            td от 30 мин
-                            td 
-                                button(type="button").cont-btn Оформить справку
-                        tr        
-                            td
-                                a(href="#") Медсправка водительская 003-В/у 
-                            td 2100 &#8381; 
-                            td от 30 мин
-                            td 
-                                button(type="button").cont-btn Оформить справку   
-            .tab-block#tab2
-                table.price-table(cellspacing="0")                        
-                    thead.thead-mob
-                        tr
-                            td(colspan="4") Наименование медсправки
-                            td Цена
-                            td Время медкомиссии
-                            td
-                    thead.thead-desc
-                        tr
-                            td Наименование медсправки
-                            td Цена
-                            td Время медкомиссии
-                            td            
-                    tbody
-                        tr
-                            td
-                                a(href="#") Медсправка водительская 003-В/у
-                            td 2100 &#8381; 
-                            td от 30 мин
-                            td 
-                                button(type="button").cont-btn Оформить справку
-                        tr        
-                            td
-                                a(href="#") Медсправка на оружие 002-О/у
-                            td 2100 &#8381; 
-                            td от 30 мин
-                            td 
-                                button(type="button").cont-btn Оформить справку
-                        tr        
-                            td
-                                a(href="#") Справка на работу 086/у
-                            td 2100 &#8381; 
-                            td от 30 мин
-                            td 
-                                button(type="button").cont-btn Оформить справку
-                        tr        
-                            td 
-                                a(href="#") Справка на госслужбу 001 гс/у
-                            td 2100 &#8381; 
-                            td от 30 мин
-                            td 
-                                button(type="button").cont-btn Оформить справку
-                        tr        
-                            td
-                                a(href="#") Медсправка водительская 003-В/у 
-                            td 2100 &#8381; 
-                            td от 30 мин
-                            td 
-                                button(type="button").cont-btn Оформить справку   
-    
-    .popular.container
-        h2.main-title Популярные медсправки
-        .main-text
-            p Наша клиника осуществляет оформление медицинских справок в Москве для ГИБДД, на приобретения оружия, на пропуск к плаванию в бассейне, о профпригодности и др. Медосмотр для получения необходимой медицинской справки 2019 года проводится в удобное для клиента время. Современная клиника, оснащенная новейшим оборудованием, позволяет провести любые медицинские исследования и анализы в оперативном порядке.
-            
-            ul.content-list
-                li 
-                    a(href="#") Медсправка водительская
-                li
-                    a(href="#") Медсправка на оружие
-                li 
-                    a(href="#") Медсправка на работу
-                li
-                    a(href="#") Медсправка водительская
-                li
-                    a(href="#") Медсправка водительская
-                li
-                    a(href="#") Медсправка водительская
-                li 
-                    a(href="#") Медсправка водительская
-                li
-                    a(href="#") Медсправка на оружие
-                li 
-                    a(href="#") Медсправка на работу
-                li 
-                    a(href="#") Медсправка водительская
-                li
-                    a(href="#") Медсправка на оружие
-                li 
-                    a(href="#") Медсправка на работу
+    .specialist-block.container
+        h2.main-title Список медицинских специалистов для получения медсправки нового образца
         
+        .tabs
+            a(href="#tab1") Категория А, А1, B, BE, B1, M
+            a(href="#tab2") Категория C, CE, C1, C1E, D
+            
+        .tab-block#tab1
+            table.specialist-table(cellspacing="0")
+                thead.thead-desc
+                    tr
+                        td Врач / процедура
+                        td Прохождение специалиста
+                        td  
+                thead.thead-mob
+                    tr
+                        td(colspan="3") Врач / процедура          
+                tbody
+                    tr
+                        td Врач-терапевт
+                        td
+                            span.check.table-str Обязательно
+                        td 
+                            button(type="button").cont-btn Записаться на прием
+                    tr        
+                        td Офтальмолог
+                        td
+                            span.check.table-str Обязательно
+                        td 
+                            button(type="button").cont-btn Записаться на прием
+                    tr        
+                        td Психиатр
+                        td 
+                            span.check.table-str Обязательно
+                        td 
+                            button(type="button").cont-btn Записаться на прием
+                    tr        
+                        td Отолариголог
+                        td
+                            span.direction.table-str По направлению терапевта
+                        td 
+                    tr        
+                        td Анализ мочи
+                        td 
+                            span.direction.table-str По направлению терапевта 
+                        td 
+        .tab-block#tab2
+            table.specialist-table(cellspacing="0")
+                thead.thead-desc
+                    tr
+                        td Врач / процедура
+                        td Прохождение специалиста
+                        td  
+                thead.thead-mob
+                    tr
+                        td(colspan="3") Врач / процедура          
+                tbody
+                    tr
+                        td Врач-терапевт
+                        td
+                            span.check.table-str Обязательно
+                        td 
+                            button(type="button").cont-btn Записаться на прием
+                    tr        
+                        td Офтальмолог
+                        td
+                            span.check.table-str Обязательно
+                        td 
+                            button(type="button").cont-btn Записаться на прием
+                    tr        
+                        td Психиатр
+                        td 
+                            span.check.table-str Обязательно
+                        td 
+                            button(type="button").cont-btn Записаться на прием
+                    tr        
+                        td Отолариголог
+                        td
+                            span.direction.table-str По направлению терапевта
+                        td 
+                    tr        
+                        td Анализ мочи
+                        td 
+                            span.direction.table-str По направлению терапевта 
+                        td                     
+        .specialist-block__article 
+            span Осмотр у психиатра и психиатра-нарколога может пройти только в специализированных диспансерах по месту жительства
+            
     .slider-wrap.container
         h2.main-title Лицензии медицинского центра
         .lissence-slider.swiper-container
