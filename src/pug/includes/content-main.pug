@@ -238,5 +238,38 @@ main
                         td от 30 мин
                         td 
                             button(type="button").cont-btn Оформить справку   
-                                    
+    
+    .request
+        .container
+            .request__logo
+                img(src="img/logo.png" width="145" height="81")
+            .wooman
+                img(src="img/wooman.png" width="456" height="475" alt="Справка через 30 минут")        
+            .request__title Отправьте заявку - нужная справка через 30 минут
+            .request__inner
+                .request__item
+                    .request__advantage 
+                        span Наши цены на медсправки всегда ниже чем у конкурентов на 10%
+                    .request__block
+                        .column
+                            .custom-select.request__select
+                                select
+                                    option Какая справка вам нужна?
+                                    option Тест 1
+                                    option Тест 2
+                                    option Тест 3
+                        .column    
+                            input(type="text" placeholder="Ваше имя").form-inp.form-inp_name.request__inp
+                        .column
+                            input(type="text" placeholder="Номер телефона").form-inp.form-inp_phone.request__inp
+                            
+                    textarea(placeholder="Комментарий...").textarea
+                        
+                .request__item                        
+                    button.btn(type="submit").request__btn Записаться на комиссию
+            .privacy.request__privacy
+                a(href="#") 
+                    |Нажимая на кнопку "Записаться на комиссию" я принимаю условия, даю согласие 
+                    span на обработку персональных данных          
+                                 
                             
