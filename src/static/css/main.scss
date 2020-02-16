@@ -434,7 +434,10 @@
     flex-direction: column;
     align-items: center;
     display: none;
-    @media(max-width: 991px) {
+    @media(max-width: 374px) {
+        top: 57px;
+    }
+    @media(min-width: 375px) and (max-width: 991px) {
         top: 82px;
     }
 }
@@ -516,7 +519,7 @@
     width: 343px;
     height: 79px;
     @media(max-width: 374px) {
-        width: 300px;
+        width: 280px;
     }
 }
 
@@ -1231,6 +1234,14 @@
     }
 }
 
+.lis-next {
+    background: url("../img/next.png") no-repeat center;
+}
+
+.lis-prev {
+    background: url("../img/prev.png") no-repeat center;
+}
+
 .ref-prev {
     left: -60px;
     background: url("../img/prev.png") no-repeat center;
@@ -1240,6 +1251,7 @@
     }
 }
 
+.lissence-slider,
 .ref-slider {
     padding-top: 30px;
     padding-bottom: 40px;
@@ -1261,6 +1273,14 @@
         background: #2A6FDB;
         border-radius: 10px;
     }
+}
+
+.lissence-slider {
+    margin-bottom: 40px;
+}
+
+.popular {
+    margin-bottom: 30px;
 }
 
 .rent {
@@ -1720,32 +1740,35 @@
     @media(max-width: 1279px) {
         border-radius: 40px 40px 0 0;
     }
-    @media(min-width: 1600px){
+    @media(min-width: 1600px) {
         padding-bottom: 37px;
     }
+
     .container {
         position: relative;
     }
 }
 
-.wooman{
+.wooman {
     position: absolute;
     right: -70px;
     bottom: -43px;
-    @media(max-width: 1599px){
+    @media(max-width: 1599px) {
         display: none;
     }
 }
 
-.request__inner{
-    @media(min-width: 1600px){
+.request__inner {
+    @media(min-width: 1600px) {
         display: flex;
         justify-content: space-between;
-        .request__item{
-            &:first-child{
+
+        .request__item {
+            &:first-child {
                 width: 1216px;
             }
-            &:last-child{
+
+            &:last-child {
                 width: calc(100% - 1250px);
                 display: flex;
                 align-items: flex-end;
@@ -1755,12 +1778,11 @@
     }
 }
 
-.request__logo{
+.request__logo {
     position: absolute;
     left: 10px;
-    top: 0px;
-
-    @media(max-width: 1279px){
+    top: 0;
+    @media(max-width: 1279px) {
         display: none;
     }
 }
@@ -1821,7 +1843,7 @@
     color: #B3CCF8;
     line-height: 18px;
     padding-top: 20px;
-    @media(min-width: 1600px){
+    @media(min-width: 1600px) {
         padding-top: 14px;
     }
 
@@ -1857,7 +1879,7 @@
     width: 100%;
     position: relative;
     z-index: 10;
-    @media(min-width: 1600px){
+    @media(min-width: 1600px) {
         height: 95px;
     }
 }
@@ -1873,5 +1895,115 @@
     }
     @media(min-width: 1600px) {
         margin: 0;
+    }
+}
+
+.tabs {
+    border-bottom: 1px solid #C6DCFF;
+    margin-bottom: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    @media(min-width: 768px) {
+        padding-left: 15px;
+        display: block;
+        text-align: left;
+    }
+    @media(min-width: 992px) {
+        padding-left: 0;
+        margin-left: 68px;
+    }
+
+    a {
+        font-family: "TTNorms-Bold";
+        display: inline-block;
+        color: #BDBDBD;
+        font-size: 22px;
+        padding-bottom: 2px;
+        border-bottom: 3px solid transparent;
+        @media(min-width: 768px) {
+            &:first-child {
+                margin-right: 55px;
+            }
+        }
+
+        &:hover {
+            color: #2C44BF;
+        }
+    }
+
+    a.active {
+        color: #2C44BF;
+        border-bottom: 3px solid #2C44BF;
+    }
+}
+
+.map {
+    width: 100%;
+    height: 455px;
+    margin-bottom: 28px;
+}
+
+.lissence-slider__img {
+    text-align: center;
+}
+
+.content-list {
+    font-family: "TTNorms-Medium";
+    font-size: 20px;
+    color: #233142;
+    display: inline-block;
+    padding-top: 10px;
+    @media(min-width: 500px) {
+        column-count: 2;
+    }
+    @media(min-width: 768px) {
+        column-count: 3;
+    }
+
+    a {
+        color: inherit;
+        display: inline-block;
+        padding-bottom: 1px;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            color: #3E72CF;
+            border-bottom: 1px solid #3E72CF;
+        }
+    }
+
+    li {
+        margin-bottom: 17px;
+        position: relative;
+        padding-left: 28px;
+        @media(min-width: 500px) {
+            margin-right: 25px;
+        }
+        @media(min-width: 768px) {
+            margin-right: 35px;
+        }
+        @media(min-width: 1280px) {
+            margin-right: 55px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: #3E72CF;
+            border-radius: 10em;
+        }
+    }
+}
+
+.about-moscow {
+    margin-bottom: 30px;
+    @media(min-width: 1280px) {
+        margin-bottom: 60px;
     }
 }
